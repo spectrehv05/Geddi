@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="hi-Latn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Geddi - Aaj kahan?</title>
+  <meta name="description" content="Last-minute plans for Delhi NCR, picked by your mood and who you're with. Aaj kahan? Mood batao, plan hum denge.">
+  <meta name="theme-color" content="#0F1A2E">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='9' fill='%230F1A2E'/%3E%3Cpath d='M33 20a13 13 0 1 1-4.5-9.8' fill='none' stroke='%23F2EDE4' stroke-width='3.5' stroke-linecap='round'/%3E%3Ccircle cx='33' cy='20' r='3.2' fill='%23FF9F1C'/%3E%3C/svg%3E">
+  <!-- Share preview (WhatsApp, Instagram, X). After hosting, replace og:image and og:url with your full https:// links. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Geddi - Aaj kahan?">
+  <meta property="og:description" content="Last-minute plans for Delhi NCR, picked by your mood and who you're with.">
+  <meta property="og:image" content="og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR: brand on the left, language switch on the right -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./" aria-label="Geddi home">
+        <!-- Logo: an open loop (a lap with no destination) and a dot -->
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <path class="brand-arc" pathLength="1" d="M33 20a13 13 0 1 1-4.5-9.8" />
+          <circle class="brand-dot" cx="33" cy="20" r="3.2" />
+        </svg>
+        <span class="brand-name">Geddi</span>
+      </a>
+      <button id="lang-toggle" type="button">EN | Hinglish</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <h2 class="hero-title" data-i18n="heroTitle">Aaj kahan? Mood batao, plan hum denge.</h2>
+      <p class="hero-sub" data-i18n="heroSub"></p>
+    </section>
+
+    <!-- STEP A: pick a mood -->
+    <section id="mood-section">
+      <div class="section-head">
+        <h2 class="section-title" data-i18n="moodQ">Aaj kya mood hai?</h2>
+        <button id="surprise-btn" class="btn" type="button" data-i18n="surprise">Surprise Me</button>
+      </div>
+      <div id="mood-grid"><!-- JS fills mood tiles here --></div>
+    </section>
+
+    <!-- STEP B: filters -->
+    <section id="filter-section">
+      <div class="filter-group" id="filter-who"></div>
+      <div class="filter-group" id="filter-budget"></div>
+      <div class="filter-group" id="filter-time"></div>
+      <div class="filter-group" id="filter-slot"></div>
+      <div class="filter-group" id="filter-area"></div>
+    </section>
+
+    <!-- STEP C: results -->
+    <section id="results-section">
+      <div id="results"><!-- JS fills place cards here --></div>
+    </section>
+
+    <!-- STEP D: the full plan for one chosen place -->
+    <section id="plan-section" hidden>
+      <article id="plan-card"></article>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p data-i18n="footer"></p>
+    <p data-i18n="disclaimer"></p>
+    <p><span data-i18n="updated"></span> <a id="feedback-link" class="feedback-link" hidden data-i18n="feedback"></a></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="places-batch1.js"></script>
+  <script src="places-batch2.js"></script>
+  <script src="places-batch3.js"></script>
+  <script src="places-batch4.js"></script>
+  <script src="places-batch5.js"></script>
+  <script src="places-batch6.js"></script>
+  <script src="places-batch7.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
